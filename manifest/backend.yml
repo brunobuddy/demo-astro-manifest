@@ -1,0 +1,9 @@
+name: My pet app
+entities:
+  Post:
+    properties:
+      - title
+      - description
+      - {name: pubDate, type: date}
+      - {name: updatedDate, type: date}
+      - {name: heroImage, type: image}

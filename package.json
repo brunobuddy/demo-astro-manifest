@@ -7,7 +7,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "manifest": "node node_modules/manifest/scripts/watch/watch.js",
+    "manifest:seed": "node node_modules/manifest/dist/manifest/src/seed/scripts/seed.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.8",
@@ -15,6 +17,7 @@
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^4.16.6",
     "@astrojs/check": "^0.9.4",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "manifest": "^4.0.4"
   }
 }
