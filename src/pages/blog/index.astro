@@ -3,12 +3,16 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+import FormattedDate from '../../components/FormattedDate.astro';
+import Manifest from '@mnfst/sdk'
+
+// Init SDK.
+const manifest = new Manifest()
+
+const result = await manifest.from('posts').find()
+const posts:any = result.data
+
 ---
 
 <!doctype html>
@@ -93,11 +97,11 @@ const posts = (await getCollection('blog')).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<a href={`/blog/${post.slug}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
-									<h4 class="title">{post.data.title}</h4>
+								<a href={`/blog/${post.id}/`}>
+									<img width={720} height={360} src={manifest.imageUrl(post.heroImage, 'small')} alt="" />
+									<h4 class="title">{post.title}</h4>
 									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
+										<FormattedDate date={post.pubDate} />
 									</p>
 								</a>
 							</li>

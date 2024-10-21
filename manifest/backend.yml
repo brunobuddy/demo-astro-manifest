@@ -6,4 +6,13 @@ entities:
       - description
       - {name: pubDate, type: date}
       - {name: updatedDate, type: date}
-      - {name: heroImage, type: image}
+      - {name: heroImage, type: image, options: {sizes: {
+          small: {
+            width: 320,
+            height: 240
+          },
+          large: {
+            width: 960,
+            height: 480
+          }
+        }}} 

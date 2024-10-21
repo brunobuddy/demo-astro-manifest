@@ -1,0 +1,18 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+import Manifest from '@mnfst/sdk'
+
+const { id } = Astro.params;
+
+export async function getStaticPaths() {
+	const manifest = new Manifest()
+	const posts = await manifest.from('posts').find()
+	return posts.data.map((post:any) => ({ params: { id: post.id.toString() } }))
+}
+
+
+---
+
+<BlogPost id={id}>
+
+</BlogPost>
