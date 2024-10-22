@@ -1,16 +1,12 @@
-# Astro Starter Kit: Blog
+# Manifest + Astro: Making the Starter Blog Template dynamic
 
-```sh
-npm create astro@latest -- --template blog
-```
+This repository enhances the default **Astro starter blog template** adding a [Manifest backend](https://github.com/mnfst/manifest) to it. Instead of getting the blog post from a static "content" folder, we use Manifest JS SDK to fetch dynamically the data.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/brunobuddy/demo-astro-manifest/tree/latest/examples/blog)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/brunobuddy/demo-astro-manifest/tree/latest/examples/blog)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/brunobuddy/demo-astro-manifest?devcontainer_path=.devcontainer/blog/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+![blog](./public//manifest-with-astro.png)
 
 Features:
 
@@ -20,6 +16,12 @@ Features:
 - ✅ Sitemap support
 - ✅ RSS Feed support
 - ✅ Markdown & MDX support
+
+🦚 New features:
+
+- 🔥 Admin panel
+- 🔥 Dynamic resources
+- 🔥 SQLite database
 
 ## 🚀 Project Structure
 
@@ -32,19 +34,14 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── content/
 │   ├── layouts/
 │   └── pages/
+├── manifest/
+│   ├── backend.db
+│   ├── backend.yml
 ├── astro.config.mjs
 ├── README.md
 ├── package.json
 └── tsconfig.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -61,7 +58,9 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[Manifest](https://github.com/mnfst/manifest) is a whole backend that fits into a single YAML file. It is a simple way to turn any frontend dynamic with minimal config and skill set. The project is in BETA, if you want to follow the project, [give us a ⭐ on Github !](https://github.com/mnfst/manifest)
+
+![Manifest admin panel login](./public/manifest-login.png)
 
 ## Credit
 
