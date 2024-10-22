@@ -6,6 +6,8 @@ This repository enhances the default **Astro starter blog template** adding a [M
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/brunobuddy/demo-astro-manifest)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/brunobuddy/demo-astro-manifest?devcontainer_path=.devcontainer/blog/devcontainer.json)
 
+> 🧑‍🚀 On cloud editors, play around switching from http://localhost:4321 (frontend) and http://localhost:1111 (admin panel)
+
 ![blog](./public//manifest-with-astro.png)
 
 Features:
